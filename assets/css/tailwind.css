@@ -151,10 +151,10 @@
     @apply px-5;
   }
   h1, .h1 {
-    @apply font-normal text-3xl md:text-4xl lg:text-7xl;
+    @apply font-normal text-5xl md:text-6xl lg:text-7xl;
   }
   h2, .h2 {
-    @apply font-normal text-2xl md:text-3xl lg:text-4xl;
+    @apply font-normal text-3xl md:text-3xl lg:text-4xl;
   }
   h3, .h3 {
     @apply font-normal text-xl md:text-2xl lg:text-3xl;

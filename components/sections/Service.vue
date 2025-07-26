@@ -1,13 +1,13 @@
 <template>
-  <div class="grid grid-cols-12 mt-8 md:mt-24">
-    <div class="col-span-6">
+  <div class="grid grid-cols-12 mt-16 md:mt-24">
+    <div class="col-span-10 md:col-span-6">
       <h2>
         {{ data.title.text_before }}
         <span class="text-yellow-900">{{ data.title.text_span }}</span>
         {{ data.title.text_after }}
       </h2>
     </div>
-    <div class="col-span-12 mt-6 grid grid-cols-3 gap-3">
+    <div class="col-span-12 mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
       <div class="" v-for="(item, index) in data.items" :key="index">
         <ServeiceCard :data="item"/>
       </div>

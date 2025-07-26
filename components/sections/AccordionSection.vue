@@ -40,7 +40,7 @@ const items = [
 </script>
 
 <template>
-  <div class="mt-8 md:mt-16 bg-black rounded-xl p-16">
+  <div class="mt-8 md:mt-16 bg-black rounded-xl p-8 md:p-16">
     <Accordion type="single" collapsible>
       <h2 class="text-white mb-8">
         FAQ: Часті питання про 
@@ -52,7 +52,7 @@ const items = [
         >
           <p class="body-1">{{ item.title }}</p>
           <template v-slot:icon>
-            <div class="bg-white w-8 h-8 flex justify-center items-center duration-5000">
+            <div class="bg-white w-8 h-8 flex shrink-0 justify-center items-center duration-5000">
               <Plus class="w-5 h-5 transition-transform text-black" />
             </div>
           </template>

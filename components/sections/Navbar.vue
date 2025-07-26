@@ -6,14 +6,27 @@
           <p class="h3">DEZ Service.</p>
         </a>
       </div>
-      <div @click="isOpen = !isOpen" class="w-[2.783125rem] h-[1.41125rem] lg:hidden flex justify-center items-center">
+      <div @click="isOpen = !isOpen" class="relative w-8 h-8 lg:hidden border-2 border-black flex justify-center items-center">
+          <Transition name="icon">
+            <div v-if="isOpen" class="w-6 h-6 flex justify-center items-center flex-wrap">
+              <Icon 
+                name="lucide:plus"
+                style="color: inherit; width: inherit; height: inherit; transform: rotate(45deg);"
+              />
+            </div>
+            <div v-else="!isOpen" class="w-6 h-6 flex justify-center items-center flex-wrap">
+              <Icon
+                name="lucide:menu"
+                style="color: inherit; width: inherit; height: inherit;"
+              />
+            </div>
+          </Transition>
       </div>
       <div class="hidden lg:block">
         <ul class="h-full flex gap-7 justify-between items-center">
-          <li><a href="/#home">Головна</a></li>
-          <li><a href="/#we-are">Хто ми</a></li>
-          <li><a href="/#why-we">Чому ми</a></li>
-          <li><a href="/#cooperation">Співпраця</a></li>
+          <li><a href="/#home">Залишити заявку</a></li>
+          <li><a href="/#we-are">Послуги</a></li>
+          <li><a href="/#why-we">FAQ.</a></li>
         </ul>
       </div>
     </nav>
@@ -27,12 +40,12 @@
   >
     <div v-show="isOpen" class="overflow-hidden">
     <div
-      class="top-16 left-0 w-full h-fit shadow-lg flex flex-col items-center gap-4 pt-4 pb-8 lg:hidden z-50"
+      class="top-16 left-0 border-2 border-yellow w-full h-fit shadow-lg flex flex-col items-center gap-4 p-4 lg:hidden z-50"
     >
     <ul class="text-center flex flex-col gap-4">
-      <li class="text-green body-1 font-medium"><a href="/#we-are">Чому ми</a></li>
-      <li class="text-green body-1 font-medium"><a href="/#why-we">Наш досвід</a></li>
-      <li class="text-green body-1 font-medium"><a href="/#faq">F.A.Q.</a></li>
+      <li class="text-green body-1 font-medium"><a href="/#we-are">Залишити заявку</a></li>
+      <li class="text-green body-1 font-medium"><a href="/#why-we">Послуги</a></li>
+      <li class="text-green body-1 font-medium"><a href="/#faq">FAQ.</a></li>
     </ul>
     </div>
     </div>
@@ -60,7 +73,7 @@ const end = (el) => {
 .fade-enter-active,
 .fade-leave-active {
   will-change: height, padding;
-  transition: all 1s, padding 1s;
+  transition: all 0.5s, padding 0.5s;
 }
 .fade-enter-from,
 .fade-leave-to {
@@ -68,5 +81,22 @@ const end = (el) => {
   height: 0 !important;
   padding: 0 !important;
   background: transparent;
+}
+
+.icon-enter-active,
+.icon-leave-active {
+  transition: all 0.35s ease-out;
+}
+
+.icon-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+  position: absolute;
+}
+
+.icon-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+  position: absolute;
 }
 </style>
