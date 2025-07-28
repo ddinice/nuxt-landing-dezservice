@@ -145,6 +145,9 @@
 }
 
 @layer components {
+  html {
+    scroll-behavior: smooth;
+  }
   .wrapper {
     margin: 0 auto;
     max-width: calc(81rem + 1.25rem);

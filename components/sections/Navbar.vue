@@ -2,7 +2,7 @@
   <div class="py-6">
     <nav class="flex justify-between items-center">
       <div class="h-[1.4375rem] w-[9.375rem] lg:h-[2.5625rem] lg:w-auto">
-        <a href="/#home">
+        <a href="/#">
           <p class="h3">DEZ Service.</p>
         </a>
       </div>
@@ -43,9 +43,13 @@
       class="top-16 left-0 border-2 border-yellow w-full h-fit shadow-lg flex flex-col items-center gap-4 p-4 lg:hidden z-50"
     >
     <ul class="text-center flex flex-col gap-4">
-      <li class="text-green body-1 font-medium"><a href="/#we-are">Залишити заявку</a></li>
-      <li class="text-green body-1 font-medium"><a href="/#why-we">Послуги</a></li>
-      <li class="text-green body-1 font-medium"><a href="/#faq">FAQ.</a></li>
+      <li 
+        v-for="item in data.links"
+        @click="isOpen = !isOpen"
+        class="text-green body-1 font-medium"
+      >
+        <a :href="item.url">{{ item.title }}</a>
+      </li>
     </ul>
     </div>
     </div>
@@ -56,6 +60,23 @@
 import { ref } from 'vue'
 
 const isOpen = ref(false);
+
+const data = {
+  links: [
+    {
+      title: 'Залишити заявку',
+      url: '/#message',
+    },
+    {
+      title: 'Послуги',
+      url: '/#service',
+    },
+    {
+      title: 'FAQ.',
+      url: '/#faq'
+    }
+  ]
+};
 const start = (el) => {
   el.style.height = el.scrollHeight +'px';
   el.style.background = 'transparent';

@@ -9,9 +9,15 @@
         <div>
           <p class="h3">Навігація</p>
           <div class="mt-5 flex flex-col gap-4">
-            <p class="body-2">Залишити заявку</p>
-            <p class="body-2">Послуги</p>
-            <p class="body-2">FAQ.</p>
+            <a href="/#message">
+              <p class="body-2">Залишити заявку</p>
+            </a>
+            <a href="/#service">
+              <p class="body-2">Послуги</p>
+            </a>
+            <a href="/#faq">
+              <p class="body-2">FAQ.</p>
+            </a>
           </div>
         </div>
         <div>

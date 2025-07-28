@@ -17,7 +17,11 @@ const props = defineProps<{
     text: string,
     img?: string,
     btn?: string,
-    bg?: string, 
+    bg?: string,
+    link?: {
+      title: string,
+      url: string
+    }
   }
 }>()
 
@@ -33,7 +37,11 @@ const props = defineProps<{
       <p>{{ props.data.text }}</p>
     </CardContent>
     <CardFooter>
-     
+     <div v-if="props.data?.link?.url">
+      <a :href="props.data?.link?.url">
+        <Button>{{ props.data?.link?.title }}</Button>
+      </a>
+     </div>
     </CardFooter>
   </Card>
 </template>

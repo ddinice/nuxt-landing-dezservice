@@ -40,7 +40,7 @@ const items = [
 </script>
 
 <template>
-  <div class="mt-8 md:mt-16 bg-black rounded-xl p-8 md:p-16">
+  <div id="faq" class="mt-8 md:mt-16 bg-black rounded-xl p-8 md:p-16">
     <Accordion type="single" collapsible>
       <h2 class="text-white mb-8">
         FAQ: Часті питання про 

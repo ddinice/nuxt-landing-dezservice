@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 mt-16 md:mt-24">
+  <div id="service" class="grid grid-cols-12 mt-16 md:mt-24">
     <div class="col-span-10 md:col-span-6">
       <h2>
         {{ data.title.text_before }}
@@ -7,7 +7,7 @@
         {{ data.title.text_after }}
       </h2>
     </div>
-    <div class="col-span-12 mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+    <div class="col-span-12 mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 overflow-visible">
       <div class="" v-for="(item, index) in data.items" :key="index">
         <ServeiceCard :data="item"/>
       </div>
@@ -56,6 +56,10 @@ const data = reactive({
       title: 'Залишите заявку на послугу',
       text: 'професійна обробка приміщень для знищення шкідливих вірусів, бактерій і грибків. Ефективно усуваємо джерела інфекцій та неприємні запахи',
       bg: 'bg-yellow',
+      link: {
+        title: 'Залишити Заявку',
+        url: '/#message'
+      }
     },
   ]
 })
