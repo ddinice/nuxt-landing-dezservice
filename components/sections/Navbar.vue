@@ -3,7 +3,7 @@
     <nav class="flex justify-between items-center">
       <div class="h-[1.4375rem] w-[9.375rem] lg:h-[2.5625rem] lg:w-auto">
         <a href="/#">
-          <p class="h3">DEZ Service.</p>
+          <p class="h3 font-[900]">DEZ Service.</p>
         </a>
       </div>
       <div @click="isOpen = !isOpen" class="relative w-8 h-8 lg:hidden border-2 border-black flex justify-center items-center">

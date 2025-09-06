@@ -4,6 +4,7 @@
       <Navbar />
       <Hero />
       <Advantages />
+      <TextBlock />
       <Service />
       <AccordionSection />
       <Footer />

@@ -1,7 +1,8 @@
 <template>
   <div class="grid grid-areas-hero grid-cols-12 grid-rows-[auto_auto_auto] md:grid-rows-[auto_auto] gap-7 mt-8 md:mt-16">
     <div class="col-span-12 row-start-1 md:col-span-6 xl:col-span-7 area-heading">
-      <h1>Захищаємо ваш дім, <span class="text-yellow-900">позбуваючись</span> кожного шкідника.</h1>
+      <h1>Захищаємо від шкідників <span class="text-yellow-900">ваш Дім та Бізнес</span>.</h1>
+      <p class="text-2xl whitespace-pre-line mt-4 font-[200] py-5">Дератизація, дезінсекція та дезінфекція.<br>Працюємо по всій Україні з гарантією результату.</p>
     </div>
     <div id="message" class="col-span-12 row-start-3 md:row-start-1 md:col-span-6 xl:col-span-4">
       <div class="w-full relative height-[4rem]">

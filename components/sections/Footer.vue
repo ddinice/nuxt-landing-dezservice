@@ -1,31 +1,40 @@
 <template>
-  <div class="grid grid-cols-12 grid-rows-[auto_auto] md:grid-rows-[auto] gap-y-12 md:gap-y-7 gap-x-7 mt-8 md:mt-16 mb-10 p-5 md:p-10">
-    <div class="col-span-12 md:col-span-5 row-start-2 md:row-start-1">
-      <p class="h2">DEZ Service.</p>
-      <p class="body-2 max-w-[300px] text-gray-900 mt-5">Ми не просто боремося зі шкідниками — ми гарантуємо результат</p>
+  <div class="grid grid-cols-12 grid-rows-[auto_auto] md:grid-rows-[auto] gap-y-12 md:gap-y-7 gap-x-7 mt-8 md:mt-20 mb-10 p-5 md:p-15 shadow-sm border-3 rounded-xl">
+    <div class="col-span-12 md:col-span-4 row-start-2 md:row-start-1 flex flex-col gap-4">
+      <p class="h2 font-[900]">DEZ Service.</p>
+
+      <p class="text-2xl text-gray-900">ФОП «Щербатюк»</p>
+      <p class="text-2xl text-gray-900">13601, вул. Перемоги 17, с. Ягнятин, Бердичівський р-н, Житомирська область</p>
+      
     </div>
-    <div class="col-span-12 md:col-span-6 row-start-1 md:row-start-1">
+    <div class="col-span-12 md:col-span-4 row-start-1 md:row-start-1">
       <div class="flex gap-8 md:gap-16 flex-wrap md:flex-nowrap">
         <div>
-          <p class="h3">Навігація</p>
-          <div class="mt-5 flex flex-col gap-4">
-            <a href="/#message">
-              <p class="body-2">Залишити заявку</p>
-            </a>
-            <a href="/#service">
-              <p class="body-2">Послуги</p>
-            </a>
-            <a href="/#faq">
-              <p class="body-2">FAQ.</p>
-            </a>
+          <p>Контакти</p>
+          <div class="flex flex-col gap-3 mt-3">
+            <p class="text-xl text-gray-900">+38 067 65 65 345</p>
+            <p class="text-xl text-gray-900">v.shcherbatiuk@ukr.net</p>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="col-span-12 md:col-span-4 row-start-1 md:row-start-1">
+      <div class="flex gap-8 md:gap-16 flex-wrap md:flex-nowrap">
         <div>
-          <p class="h3">Контакти</p>
-          <div class="mt-5 flex flex-col gap-4">
-            <p class="body-2">+380 98 785 43 21</p>
-            <p class="body-2">info@dezsercive.com</p>
-            <p class="body-2">Київ, Україна 01001</p>
+          <p>Навігація</p>
+          <div class="flex flex-col gap-3 mt-3">
+            <a href="/#service">
+              <p class="text-xl text-gray-900">Наші Послуги</p>
+            </a>
+            <a href="/#faq">
+              <p class="text-xl text-gray-900">Про Нас</p>
+            </a>
+            <a href="/#faq">
+              <p class="text-xl text-gray-900">FAQ</p>
+            </a>
+            <a href="/#message">
+              <p class="text-xl text-gray-900">Залишити заявку</p>
+            </a>
           </div>
         </div>
       </div>

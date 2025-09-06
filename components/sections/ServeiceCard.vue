@@ -34,7 +34,7 @@ const props = defineProps<{
       <CardTitle class="mt-5">{{ props.data.title }}</CardTitle>
     </CardHeader>
     <CardContent class="grid gap-4 min-h-[100px]">
-      <p>{{ props.data.text }}</p>
+      <p class="whitespace-pre-line">{{ props.data.text }}</p>
     </CardContent>
     <CardFooter>
      <div v-if="props.data?.link?.url">

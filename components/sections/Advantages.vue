@@ -1,6 +1,6 @@
 <template>
-  <div class="relative h-fit md:h-[100px] mt-8 md:mt-0 grid grid-cols-10">
-    <div class="relative md:absolute bottom-0 col-span-12 flex items-center bg-black md:mx-8 rounded-xl overflow-hidden">
+  <div class="h-fit mt-8 md:mt-0 grid grid-cols-10">
+    <div class="mt-5 py-11 px-5 col-span-12 flex items-center bg-black rounded-xl overflow-hidden">
       <Carousel
         :opts="{
         align: 'start',
@@ -37,19 +37,29 @@ const data = reactive({
   content: [
     {
       icon: 'lucide:lock',
-      title: 'Гарантія результату',
-      text: 'Якщо шкідники повернуться впродовж гарантійного терміну – проводимо повторну обробку безкоштовно',
+      title: 'Досвід та професіоналізм',
+      text: 'Понад 10 років успішної роботи з підприємствами харчової промисловості, ресторанами та торговими площами',
     },
     {
       icon: 'lucide:notepad-text',
-      title: 'Комплексний підхід',
-      text: 'Окрім знищення, проводимо профілактичне оброблення для запобігання повторній появі шкідників',
+      title: 'Міжнародні стандарти',
+      text: 'Робота відповідно до вимог FSSC 22000, HACCP, ISO 22000, IFS, GMP, GLP, GHP',
     },
     {
       icon: 'lucide:leaf',
-      title: 'Безпечні засоби',
-      text: 'Використовуємо сертифіковані препарати, які не шкодять вашому здоров’ю, дітям та домашнім тваринам',
+      title: 'Комплексний підхід',
+      text: 'Повний цикл послуг від діагностики до регулярного моніторингу та ведення документації',
     },
+    {
+      icon: 'lucide:leaf',
+      title: 'Професійне обладнання',
+      text: 'Використання сучасних засобів: інсектицидних ламп, феромонних пасток, спеціалізованих хімічних препаратів',
+    },
+    {
+      icon: 'lucide:leaf',
+      title: 'Безпека',
+      text: 'На відміну від самодіяльності, наші фахівці гарантують безпечне та ефективне застосування засобів',
+    }
   ]
 })
 </script>
