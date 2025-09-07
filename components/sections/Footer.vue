@@ -5,7 +5,7 @@
       <p class="text-xl md:text-2xl text-gray-900">ФОП «Щербатюк»</p>
       <p class="text-xl md:text-2xl text-gray-900">13601, вул. Перемоги 17, с. Ягнятин, Бердичівський р-н, Житомирська область</p>
     </div>
-    <div class="col-span-12 md:col-span-4 row-start-1 md:row-start-1">
+    <div class="col-span-12 md:col-span-4 row-start-2 md:row-start-1">
       <div class="flex gap-8 md:gap-16 flex-wrap md:flex-nowrap">
         <div>
           <p>Контакти</p>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="col-span-12 md:col-span-4 row-start-2 md:row-start-1">
+    <div class="col-span-12 md:col-span-4 row-start-1 md:row-start-1">
       <div class="flex gap-8 md:gap-16 flex-wrap md:flex-nowrap">
         <div>
           <p>Навігація</p>
