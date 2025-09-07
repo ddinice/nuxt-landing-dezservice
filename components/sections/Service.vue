@@ -11,6 +11,8 @@
       <div class="" v-for="(item, index) in data.items" :key="index">
         <ServeiceCard :data="item"/>
       </div>
+      <ServeiceCard :data="data.lastcard"/>
+      <div class="flex sm:hidden sticky bottom-0 w-full h-10 bg-black rounded-xl text-white justify-center items-center py-6 cursor-pointer">Залишити заявку</div>
     </div>
   </div>
 </template>
@@ -62,6 +64,8 @@ const data = reactive({
       text: 'Оцінка ризиків, визначення критичних точок контролю та розробка індивідуальних програм захисту від шкідників відповідно до міжнародних стандартів.',
       img: '/images/service_9.jpg'
     },
+  ],
+  lastcard: 
     {
       title: 'Залишите заявку на послугу',
       bg: 'bg-yellow',
@@ -69,8 +73,8 @@ const data = reactive({
       link: {
         title: 'Залишити Заявку',
         url: '/#message'
-      }
-    },
-  ]
+      },
+      hideBtnMobile: true,
+    }
 })
 </script>

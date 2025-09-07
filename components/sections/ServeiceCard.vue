@@ -21,14 +21,15 @@ const props = defineProps<{
     link?: {
       title: string,
       url: string
-    }
+    },
+    hideBtnMobile?: boolean,
   }
 }>()
 
 </script>
 
 <template>
-  <Card :class="['h-full max-w-[450px]', props.data.bg ]">
+  <Card :class="['h-full sm:max-w-[450px]', props.data.bg ]">
     <CardHeader>
       <NuxtImg v-if="props.data.img" :src="props.data.img" class="rounded-md"/>
       <CardTitle class="mt-5">{{ props.data.title }}</CardTitle>
@@ -37,7 +38,7 @@ const props = defineProps<{
       <p class="whitespace-pre-line">{{ props.data.text }}</p>
     </CardContent>
     <CardFooter>
-     <div v-if="props.data?.link?.url">
+     <div v-if="props.data?.link?.url" :class="{ 'hidden sm:block': props.data.hideBtnMobile }">
       <a :href="props.data?.link?.url">
         <Button>{{ props.data?.link?.title }}</Button>
       </a>
