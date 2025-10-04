@@ -10,12 +10,11 @@ type Res = {
 }
 
 export function useSendForm() {
-  const config = useRuntimeConfig();
   const data = ref<Res | null>(null);
   const loading = ref<boolean>(false);
   const error = ref<string | null>(null);
 
-  const url = config.public.apiUrl + '/send-mail';
+  const url = 'api/send-mail';
 
   const send = async (payload: Payload) => {
     try {

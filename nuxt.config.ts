@@ -55,9 +55,6 @@ export default defineNuxtConfig({
     }
   },
   runtimeConfig: {
-    public: {
-      apiUrl: process.env.API_URL,
-    },
     server: {
       emailHost: process.env.EMAIL_HOST,
       emailPort: process.env.EMAIL_PORT,

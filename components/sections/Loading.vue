@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed inset-0 flex flex-col items-center justify-center bg-white z-50">
+  <div class="fixed inset-0 flex flex-col items-center justify-center bg-white z-101">
     <!-- <img src="/images/logo.png" alt="logo" class="w-52 mb-4" /> -->
     <div class="body-1 animate-pulse">Завантаження...</div>
   </div>

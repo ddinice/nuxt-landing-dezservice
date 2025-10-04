@@ -12,7 +12,9 @@
         <ServeiceCard :data="item"/>
       </div>
       <ServeiceCard :data="data.lastcard"/>
-      <div class="flex sm:hidden sticky bottom-6 w-full h-10 bg-black rounded-xl text-white justify-center items-center py-8 cursor-pointer">Залишити заявку</div>
+      <a href="#message" class="sm:hidden sticky bottom-6">
+        <div class="flex w-full h-10 bg-black rounded-xl text-white justify-center items-center py-8 cursor-pointer">Залишити заявку</div>
+      </a>
     </div>
   </div>
 </template>
