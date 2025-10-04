@@ -27,9 +27,21 @@
         </Transition>
       </FormItem>
     </FormField>
-    <Button type="submit" class="rounded-0 mt-4 bg-yellow-900 h-[3rem]">
-      Надіслати
+    <Button
+      type="submit"
+      :disabled="loading"
+      :class="[
+        'rounded-0 mt-4 h-[3rem] flex items-center justify-center gap-2 transition-colors',
+        loading ? 'bg-black' : 'bg-yellow-900'
+      ]"
+    >
+      <Loader2 v-if="loading" class="w-4 h-4 animate-spin" />
+      <span>{{ loading ? 'Надсилання...' : 'Надіслати' }}</span>
     </Button>
+
+    <p v-if="data?.message" class="mt-2 text-yellow-900">
+      {{ data.message }}
+    </p>
   </form>
 </template>
 
@@ -48,7 +60,10 @@ import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
 import { configure } from 'vee-validate';
+import { Loader2 } from "lucide-vue-next"
+import { useSendForm } from '@/composable/useForm';
 
+const { data, loading, error, send } = useSendForm();
 
 const formSchema = toTypedSchema(z.object({
   name: z.string({ message: "Це поле обов’язкове"})
@@ -69,12 +84,8 @@ configure({
   validateOnModelUpdate: false,
 });
 
-const onChange = () => {
-  console.log('errors', errors);
-};
-
 const onSubmit = handleSubmit(values => {
-  console.log('Form submitted!', values)
+  send(values);
 })
 
 </script>

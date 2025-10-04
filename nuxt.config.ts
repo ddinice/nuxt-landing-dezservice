@@ -53,5 +53,16 @@ export default defineNuxtConfig({
       ],
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
     }
-  }
+  },
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.API_URL,
+    },
+    server: {
+      emailHost: process.env.EMAIL_HOST,
+      emailPort: process.env.EMAIL_PORT,
+      emailAuthUser: process.env.EMAIL_AUTH_USER,
+      emailAuthPass: process.env.EMAIL_AUTH_PASS,
+    }
+  },
 })
