@@ -52,7 +52,7 @@ const setCarouselApi = (api: any) => {
 const startAutoScroll = () => {
   autoScrollTimer = setInterval(() => {
     carouselApi?.scrollNext()
-  }, 3000) // кожні 3 секунди
+  }, 3000)
 }
 
 onUnmounted(() => {
@@ -64,7 +64,7 @@ onUnmounted(() => {
 const data = reactive({
   content: [
     {
-      icon: 'lucide:lock',
+      icon: 'lucide:blocks',
       title: 'Досвід та професіоналізм',
       text: 'Понад 10 років успішної роботи з підприємствами харчової промисловості, ресторанами та торговими площами',
     },
@@ -74,17 +74,17 @@ const data = reactive({
       text: 'Робота відповідно до вимог FSSC 22000, HACCP, ISO 22000, IFS, GMP, GLP, GHP',
     },
     {
-      icon: 'lucide:leaf',
+      icon: 'lucide:list-checks',
       title: 'Комплексний підхід',
       text: 'Повний цикл послуг від діагностики до регулярного моніторингу та ведення документації',
     },
     {
-      icon: 'lucide:leaf',
+      icon: 'lucide:wrench',
       title: 'Професійне обладнання',
       text: 'Використання сучасних засобів: інсектицидних ламп, феромонних пасток, спеціалізованих хімічних препаратів',
     },
     {
-      icon: 'lucide:leaf',
+      icon: 'lucide:lock',
       title: 'Безпека',
       text: 'На відміну від самодіяльності, наші фахівці гарантують безпечне та ефективне застосування засобів',
     }
